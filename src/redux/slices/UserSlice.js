@@ -19,11 +19,8 @@ const usersSlice = createSlice({
     },
       updateUser: (state, action) => {
         const { id, updatedUser } = action.payload;
+          const userIndex = state.userData.findIndex((user) => user.id === id);
   
-        // Find the index of the user with the given id
-        const userIndex = state.userData.findIndex((user) => user.id === id);
-  
-        // If the user is found, update the user
         if (userIndex !== -1) {
           state.userData[userIndex] = { ...state.userData[userIndex], ...updatedUser };
         }

@@ -47,7 +47,7 @@ const AddUserListing = ({ formikProps, apiStatus, onSubmitHandler }) => {
                   onChange={(e) => {
                     console.log(setFieldValue("name", e.target.value));
                     setFieldValue("name", e.target.value);
-                    console.log(values); // Log the updated values directly
+         
                   }}
                   onBlur={formikProps.handleBlur}
                   className="bg-transparent border border-gray-700 rounded-lg py-3 px-4 "
