@@ -6,18 +6,15 @@ import Sidenavlayoutslice from './Sidenavlayoutslice';
 import AuthSlice from './AuthSlice';
 import UserSlice from './UserSlice';
 
-// Configuration for auth slice persistence
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['isAuthenticated', 'user'], // Add the properties you want to persist from the auth slice
+  whitelist: ['isAuthenticated', 'user'], 
 };
-
-// Configuration for user slice persistence
 const userPersistConfig = {
   key: 'user',
   storage,
-  whitelist: ['userData' ,"selectedUser"], // Add the properties you want to persist from the user slice
+  whitelist: ['userData' ,"selectedUser"], 
 };
 
 // Combine the reducers with persistence
